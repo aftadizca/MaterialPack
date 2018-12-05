@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">MaterialPack</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- PRODUK LIST -->
+    <string-array name="produk">
+        <item></item>
+        <item>JDO 1</item>
+        <item>JDO 3</item>
+        <item>JDO 5</item>
+        <item>JDO 7</item>
+        <item>JDO 9</item>
+        <item>JBC 4</item>
+        <item>JBC 8</item>
+        <item>JBC 9</item>
+        <item>FDO 1</item>
+        <item>FDO 2</item>
+        <item>MTB</item>
+        <item>MTE</item>
+        <item>MTG</item>
+        <item>JDB 1</item>
+        <item>JDB 3</item>
+        <item>JDB 7</item>
+    </string-array>
+
+    <!-- PRODUK LIST -->
+    <string-array name="line">
+        <item></item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+
+    </string-array>
+
+
+
+</resources>

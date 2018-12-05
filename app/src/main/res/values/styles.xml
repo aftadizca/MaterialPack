@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#51aeff</item>
+        <item name="colorPrimaryDark">#378aff</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:actionMenuTextColor">#ffffff</item>
+
+    </style>
+
+    <style name="DancingWhite" parent="android:TextAppearance">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="spinnerText" parent="android:TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <!--<item name="android:fontFamily">sans-serif-condensed</item>-->
+    </style>
+
+</resources>

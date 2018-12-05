@@ -1,0 +1,873 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a8a8a8"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context="org.aftadw.com.materialpack.Home">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:background="#81d4fa"
+        app:title="Material Input"
+        app:titleTextAppearance="@style/DancingWhite"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/touchDetector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:fillViewport="true"
+        android:scrollbarSize="1dp"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbarSize="1dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/kartonTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title1">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/produkTitle"
+                            android:layout_width="78dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/coloumn_cell_shape"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="PRODUK"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lineTitle"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/coloumn_cell_shape"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="LINE"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/saldoAwalTitle"
+                            android:layout_width="105dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/coloumn_cell_shape"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="SALDO AWAL"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/terimaTitle"
+                            android:layout_width="105dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/coloumn_cell_shape"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="TERIMA"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk1"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <Spinner
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal1"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/line1"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima1"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk2"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <Spinner
+                            android:id="@+id/line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal2"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/line1"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima2"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk3"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line3cb"
+                            app:layout_constraintTop_toBottomOf="@+id/line1"
+                            tools:ignore="MissingPrefix" />
+
+                        <Spinner
+                            android:id="@+id/line3"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal3"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk3"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalJDO"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima3"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk4"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line4cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produk3" />
+
+                        <Spinner
+                            android:id="@+id/line4"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal4"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk4"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalJDB"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima4"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk5"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line5cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produk4" />
+
+                        <Spinner
+                            android:id="@+id/line5"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal5"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk5"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalLakban"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima5"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk6"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line6cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produk5" />
+
+                        <Spinner
+                            android:id="@+id/line6"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal6"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk6"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwal5"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima6"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk7"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line6cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produk5" />
+
+                        <Spinner
+                            android:id="@+id/line7"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal7"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk6"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwal5"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima7"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/produk8"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/produk"
+                            app:layout_constraintStart_toEndOf="@+id/line6cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produk5" />
+
+                        <Spinner
+                            android:id="@+id/line8"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/line"
+                            app:layout_constraintStart_toEndOf="@+id/line1cb"
+                            app:layout_constraintTop_toBottomOf="@+id/produkTitleq" />
+
+                        <EditText
+                            android:id="@+id/saldoAwal8"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk6"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwal5"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/terima8"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/saldoAwalJDO"
+                            app:layout_constraintTop_toBottomOf="@+id/terimaTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/strawTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title2"
+                    app:layout_constraintVertical_bias="0.0">
+
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/produkTitleStraw"
+                            android:layout_width="78dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/coloumn_cell_shape"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="PRODUK"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/saldoAwalTitleStraw"
+                            android:layout_width="105dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/coloumn_cell_shape"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="SALDO AWAL"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/terimaTitleStraw"
+                            android:layout_width="200dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/coloumn_cell_shape"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="TERIMA"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/produkJDO"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:text="Straw JDO"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/saldoAwalJDO"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/line1"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalTitleStraw"
+                            tools:ignore="MissingPrefix" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <EditText
+                                android:id="@+id/terimaJDO"
+                                fontPath="fonts/RobotoCondensedRegular.ttf"
+                                android:layout_width="100dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/row_cell_shape"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="14sp"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:id="@+id/terimaCountJDO"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/row_cell_count_shape"
+                                android:ems="10"
+                                android:inputType="textPersonName" />
+                        </TableRow>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/produkMT"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:text="Straw MT"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/saldoAwalMT"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            tools:ignore="MissingPrefix" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <EditText
+                                android:id="@+id/terimaMT"
+                                fontPath="fonts/RobotoCondensedRegular.ttf"
+                                android:layout_width="100dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/row_cell_shape"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="14sp"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:id="@+id/terimaCountMT"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/row_cell_count_shape"
+                                android:ems="10"
+                                android:inputType="textPersonName" />
+                        </TableRow>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/produkJDB"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:text="Straw JDB"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/saldoAwalJDB"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk3"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalJDO"
+                            tools:ignore="MissingPrefix" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <EditText
+                                android:id="@+id/terimaJDB"
+                                fontPath="fonts/RobotoCondensedRegular.ttf"
+                                android:layout_width="100dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/row_cell_shape"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="14sp"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:id="@+id/terimaCountJDB"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/row_cell_count_shape"
+                                android:ems="10"
+                                android:inputType="textPersonName" />
+                        </TableRow>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lakban"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:text="Lakban"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/saldoAwalLakban"
+                            fontPath="fonts/RobotoCondensedRegular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/row_cell_shape"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/produk4"
+                            app:layout_constraintTop_toBottomOf="@+id/saldoAwalJDB"
+                            tools:ignore="MissingPrefix" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <EditText
+                                android:id="@+id/terimaLakban"
+                                fontPath="fonts/RobotoCondensedRegular.ttf"
+                                android:layout_width="100dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/row_cell_shape"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="14sp"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:id="@+id/terimaCountLakban"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/row_cell_count_shape"
+                                android:ems="10"
+                                android:inputType="textPersonName" />
+                        </TableRow>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/title_table"
+                    android:drawableLeft="@drawable/ic_doubleright"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text=" MATERIAL KARTON"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.037"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/title_table"
+                    android:drawableLeft="@drawable/ic_doubleright"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text=" MATERIAL STRAW LAKBAN"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/kartonTable" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

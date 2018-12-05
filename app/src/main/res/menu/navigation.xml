@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_save"
+        android:icon="@drawable/ic_save_active_24dp"
+        android:title="save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/navigation_undo"
+        android:icon="@drawable/ic_undo_active_24dp"
+        android:title="undo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/navigation_archive"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="archive"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="setting"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/navigation_clear"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="Clear"
+        app:showAsAction="collapseActionView" />
+
+</menu>
